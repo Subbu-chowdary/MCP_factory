@@ -1,0 +1,39 @@
+{
+  "name": "@mcp_factory/reddit-mcp-server",
+  "version": "1.1.0",
+  "description": "MCP server for interacting with Reddit - browse subreddits, read and create posts, comments, vote, search, and manage messages",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "reddit-mcp-server": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/cli.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "reddit"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

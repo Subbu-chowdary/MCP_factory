@@ -1,0 +1,45 @@
+{
+  "name": "@mcp_factory/telegram-mcp-server",
+  "version": "1.0.4",
+  "description": "MCP server for Telegram - read chats, send messages, manage contacts, search messages. Built-in MTProto auth with OTP verification UI.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "telegram-mcp-server": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/cli.js",
+    "auth": "node dist/auth-server.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "telegram",
+    "mtproto",
+    "gramjs"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "telegram": "^2.26.0",
+    "input": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "public",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
